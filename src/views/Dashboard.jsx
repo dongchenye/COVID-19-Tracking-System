@@ -19,10 +19,11 @@ import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
 
 import { StatsCard } from "components/StatsCard/StatsCard.jsx";
-import Chart from '../variables/Chart.js';
+
 import Bar from '../variables/Bar.js';
 import JSONdata from "../data.json";
-
+import ApexChart from '../variables/LineChart.js';
+import { USMap } from "components/MapComponent/USMap.js";
 
 class Dashboard extends Component {
   createLegend(json) {
@@ -48,7 +49,7 @@ class Dashboard extends Component {
             <Col lg={4} sm={4}>
               <StatsCard
                 bigIcon={<i className="pe-7s-user text-danger" />}
-                statsText="Comfirmed"
+                statsText="Confirmed"
                 statsValue={Comfirmed}
                 statsIcon={<i className="fa fa-refresh" />}
                 statsIconText={"Updated by "+dataCollectTime}
@@ -73,16 +74,19 @@ class Dashboard extends Component {
               />
             </Col>
           </Row>
-          <Row>
+          <Row style={{paddingBottom: "20px"}}>
             <Col md={12}>
-              <Chart />
+              <ApexChart />
             </Col>
           </Row>
-          <Row>
-          </Row>
-          <Row>
+          <Row style={{paddingBottom: "20px"}}>
             <Col md={12}>
               <Bar />
+            </Col>
+          </Row>
+          <Row style={{paddingBottom: "20px"}}>
+            <Col md={12}>
+                <USMap />
             </Col>
           </Row>
         </Grid>

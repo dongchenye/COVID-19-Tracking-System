@@ -20,6 +20,7 @@ import WHOReport from "views/WHOReport.jsx";
 import TableList from "views/TableList.jsx";
 import AboutVirus from "views/AboutVirus.jsx";
 import Maps from "views/Maps.jsx";
+import TravelAdvice from 'views/TravelAdvice.jsx';
 
 const dashboardRoutes = [
   {
@@ -31,9 +32,23 @@ const dashboardRoutes = [
   },
   {
     path: "/maps",
-    name: "US Map",
+    name: "Global Map",
     icon: "pe-7s-map-marker",
     component: Maps,
+    layout: "/admin"
+  },
+  {
+    path: "/table",
+    name: "State Cases",
+    icon: "pe-7s-note2",
+    component: TableList,
+    layout: "/admin"
+  },
+  {
+    path: "/traveladvice",
+    name: "Travel Advice",
+    icon: "pe-7s-plane",
+    component: TravelAdvice,
     layout: "/admin"
   },
   {
@@ -43,16 +58,10 @@ const dashboardRoutes = [
     component: WHOReport,
     layout: "/admin"
   },
-  {
-    path: "/table",
-    name: "Table List",
-    icon: "pe-7s-note2",
-    component: TableList,
-    layout: "/admin"
-  },
+
   {
     path: "/aboutvirus",
-    name: "About Virus",
+    name: "About COVID-19",
     icon: "pe-7s-news-paper",
     component: AboutVirus,
     layout: "/admin"

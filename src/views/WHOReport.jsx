@@ -8,7 +8,6 @@ import {
 import { Card } from "components/Card/Card.jsx";
 import DatePicker from 'react-date-picker';
 import Moment from 'moment';
-import { Document, Page } from 'react-pdf';
 import Iframe from 'react-iframe'
 
 class WHOReport extends Component {
@@ -36,7 +35,6 @@ class WHOReport extends Component {
   })
     
   render() {
-    const { pageNumber, numPages } = this.state;
     Moment.locale('en');
     var str=Moment(this.state.date).format('YYYYMMDD');
     var d1=this.state.date;

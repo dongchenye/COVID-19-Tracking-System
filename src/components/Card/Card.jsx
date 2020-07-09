@@ -22,7 +22,7 @@ export class Card extends Component {
     return (
       <div className={"card" + (this.props.plain ? " card-plain" : "")}>
         <div className={"header" + (this.props.hCenter ? " text-center" : "")}>
-          <h4 className="title">{this.props.title}</h4>
+          <h3 className="title" style={{fontFamily: "sans-serif", fontWeight: "inherit"}}>{this.props.title}</h3>
           <p className="category">{this.props.category}</p>
         </div>
         <div
